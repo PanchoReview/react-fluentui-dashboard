@@ -52,18 +52,21 @@ const styles = {
 
 const cards = [
     {
+        key: "card1",
         title: "Current Balance",
         amount: "$21 876",
         icon: "Money",
         percentage: "2.3"
     },
     {
+        key: "card2",
         title: "Current Expanses",
         amount: "$10 376",
         icon: "PaymentCard",
         percentage: "0.3"
     },
     {
+        key: "card3",
         title: "Current Income",
         amount: "$25 124",
         icon: "Savings",
@@ -77,7 +80,7 @@ const CardsSection = () => {
     return (
         <div style={container}>
             {cards.map((card) => (
-                <div className="s-Grid-col ms-sm3 ms-xl3">
+                <div key={card.key} className="s-Grid-col ms-sm3 ms-xl3">
                     <Card styles={styles.cardStyles}>
                         <Card.Section>
                             <Card.Item>
